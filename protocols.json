@@ -6,6 +6,18 @@
         "Set": "AX01"
     },
     {
+        "Protocol": "PICKLE",
+        "Top": "Uncaring, unfeeling.",
+        "Bottom": "Flip Face-Down",
+        "Set": "PK01"
+    },
+    {
+        "Protocol": "CHEESE",
+        "Top": "Uncaring, unfeeling.",
+        "Bottom": "Flip Face-Down",
+        "Set": "PK01"
+    },
+    {
         "Protocol": "Darkness",
         "Top": "An absence of light.",
         "Bottom": "Draw, Shift, Manipulate",
