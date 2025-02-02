@@ -6,12 +6,6 @@
         "Set": "AX01"
     },
     {
-        "Protocol": "Cheese",
-        "Top": "che",
-        "Bottom": "ese",
-        "Set": "PK01"
-    },
-    {
         "Protocol": "Darkness",
         "Top": "An absence of light.",
         "Bottom": "Draw, Shift, Manipulate",
@@ -64,12 +58,6 @@
         "Top": "Hardened against all.",
         "Bottom": "Prevent, Draw, Flip",
         "Set": "MN01"
-    },
-    {
-        "Protocol": "Pickles",
-        "Top": "pick",
-        "Bottom": "els",
-        "Set": "PK01"
     },
     {
         "Protocol": "Plague",
