@@ -1,0 +1,92 @@
+[
+    {
+        "Protocol": "Apathy",
+        "Top": "Uncaring, unfeeling.",
+        "Bottom": "Flip Face-Down",
+        "Set": "AX01"
+    },
+    {
+        "Protocol": "Darkness",
+        "Top": "An absence of light.",
+        "Bottom": "Draw, Shift, Manipulate",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Death",
+        "Top": "Nothing shall survive.",
+        "Bottom": "Delete, Draw",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Fire",
+        "Top": "Burn at both ends.",
+        "Bottom": "Discard for effect",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Gravity",
+        "Top": "Draw ever inward.",
+        "Bottom": "Shift, Flip, Draw",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Hate",
+        "Top": "Ultimate disdain.",
+        "Bottom": "Delete theirs and yours",
+        "Set": "AX01"
+    },
+    {
+        "Protocol": "Life",
+        "Top": "Bring about new growth.",
+        "Bottom": "Flip, Top Deck Play, Draw",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Light",
+        "Top": "Burn away the dark.",
+        "Bottom": "Draw, Flip, Shift",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Love",
+        "Top": "Giving is the true gift.",
+        "Bottom": "Draw, Gift, Exchange",
+        "Set": "AX01"
+    },
+    {
+        "Protocol": "Metal",
+        "Top": "Hardened against all.",
+        "Bottom": "Prevent, Draw, Flip",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Plague",
+        "Top": "Slow death from within.",
+        "Bottom": "Force Discard, Flip",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Psychic",
+        "Top": "Know your foe's mind.",
+        "Bottom": "Draw, Manipulate, Shift",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Speed",
+        "Top": "Quicken with every step.",
+        "Bottom": "Draw, Play, Shift",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Spirit",
+        "Top": "True strength from within.",
+        "Bottom": "Flip, Shift, Draw",
+        "Set": "MN01"
+    },
+    {
+        "Protocol": "Water",
+        "Top": "Wash away and renew.",
+        "Bottom": "Return, Draw, Flip",
+        "Set": "MN01"
+    }
+]
