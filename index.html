@@ -3,28 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocol Draft</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        p {
-            margin: 5px 0;
-        }
-        #player1-turn, #player2-turn, #results {
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>Compile Draft Tool</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Protocol Draft</h1>
-    <div id="player1-turn"></div>
-    <div id="player2-turn"></div>
-    <div id="results"></div>
+    <h1>Compile Draft Tool</h1>
+    <h2>Choose Sets</h2>
+    <div id="filters">
+        <label>
+            <input type="checkbox" id="all-sets" checked> All Sets
+        </label>
+        <!-- Dynamic checkboxes will be inserted here -->
+    </div>
+    <div id="cards-container"></div>
     <script src="script.js"></script>
 </body>
 </html>
