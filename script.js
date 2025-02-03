@@ -135,7 +135,7 @@ function standardDraft() {
         }
     }
 
-    draftActions.innerHTML = `<p>Player ${currentPlayer}'s turn. Select ${selectionsRemaining} protocol(s):</p>`;
+    draftActions.innerHTML = `<p>Player ${currentPlayer}'s turn. <br>Select ${selectionsRemaining} protocol(s):</p>`;
 
     // Display available protocols for selection
     availablePool.forEach((protocol, index) => {
@@ -190,11 +190,11 @@ function blindEliminationDraft() {
 
     // Prompt Player 1 to eliminate 1 protocol
     if (currentPlayer === 1) {
-        draftActions.innerHTML = `<p>Player 1's turn. Select 1 protocol to eliminate:</p>`;
+        draftActions.innerHTML = `<p>Player 1's turn.<br> Select 1 protocol to eliminate:</p>`;
     }
     // Prompt Player 2 to eliminate 1 protocol
     else if (currentPlayer === 2) {
-        draftActions.innerHTML = `<p>Player 2's turn. Select 1 protocol to eliminate:</p>`;
+        draftActions.innerHTML = `<p>Player 2's turn.<br> Select 1 protocol to eliminate:</p>`;
     }
 
     // Display available protocols for elimination
