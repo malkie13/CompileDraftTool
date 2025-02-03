@@ -136,7 +136,6 @@ function standardDraft() {
     }
 
     draftActions.innerHTML = `<p>Player ${currentPlayer}'s turn. <br>Select ${selectionsRemaining} protocol(s):</p>`;
-
     // Display available protocols for selection
     availablePool.forEach((protocol, index) => {
         const card = document.createElement('div');

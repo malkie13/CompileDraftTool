@@ -6,12 +6,13 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 810px;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 p {
     font-family: 'Orbitron', sans-serif;
     font-size: 1em;
@@ -19,13 +20,15 @@ p {
     margin-top: 5px;
     font-weight: bold;
 }
-h1  {
+
+h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5em;
     font-weight: 800;
     margin-bottom: 5px;
     margin-top: 5px;
 }
+
 h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.75em;
@@ -62,10 +65,10 @@ button {
     cursor: pointer;
 }
 
-#protocol-cards {
+#protocol-cards, #draft-actions {
     display: flex;
     flex-wrap: wrap;
-    margin: 5px;
+    margin: 3px;
 }
 
 strong {
@@ -86,4 +89,31 @@ strong {
     padding: 10px;
     font-size: 1em;
     background: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Disable hover effect during set selection */
+#set-selection .protocol-card:hover {
+    background: #f9f9f9;
+    cursor: default;
+}
+
+/* Enable hover effect during drafting */
+#draft-actions .protocol-card:hover {
+    background: #e0e0e0;
+}
+
+/* Disable hover effect in results */
+#results .protocol-card {
+    cursor: default;
+}
+
+#results .protocol-card:hover {
+    background: #f9f9f9;
+}
+
+/* Ensure prompt text and protocol cards are displayed correctly */
+#draft-actions p {
+    width: 100%; /* Ensure the prompt text takes full width */
+    margin-bottom: 10px; /* Add space below the prompt text */
 }
