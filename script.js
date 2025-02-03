@@ -237,8 +237,8 @@ function endDraft() {
     // Display results
     results.classList.remove('hidden');
     results.innerHTML = `
-        <h2>Draft Results</h2>
-        <h3>Player 1 Pool</h3>
+        <h3>Draft Results</h3>
+        <h4>Player 1 Pool</h4>
         <div>${player1Pool.map(p => `
             <div class="protocol-card">
                 <strong>${p.Protocol}</strong><br>
@@ -247,7 +247,7 @@ function endDraft() {
                 <em><b>Set: ${p.Set}</b></em>
             </div>
         `).join('')}</div>
-        <h3>Player 2 Pool</h3>
+        <h4>Player 2 Pool</h4>
         <div>${player2Pool.map(p => `
             <div class="protocol-card">
                 <strong>${p.Protocol}</strong><br>

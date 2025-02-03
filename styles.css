@@ -40,6 +40,13 @@ h3 {
     margin-top: 5px;
 }
 
+h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.25em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
 .hidden {
     display: none;
 }
@@ -50,6 +57,7 @@ button {
     border: 3px solid #000;
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
+    font-size: 1em;
     margin: 5px;
     cursor: pointer;
 }
