@@ -12,6 +12,33 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+h1  {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.75em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 
 .hidden {
     display: none;
@@ -21,8 +48,8 @@ button {
     padding: 10px 10px;
     border-radius: 5px;
     border: 3px solid #000;
-    font-size: 1em;
-    font-weight: bolder;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
     margin: 5px;
     cursor: pointer;
 }
@@ -33,13 +60,18 @@ button {
     margin: 5px;
 }
 
+strong {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
 .protocol-card {
     font-family: 'Orbitron', sans-serif;
     border: 5px solid #e0e0e0;
     border-radius: 5px;
     padding: 10px;
-    width: 200px;
-    margin-bottom: 3px;
+    width: 230px;
+    margin: 3px;
     min-height: 33%;
     max-height: 33%;
     overflow: hidden;

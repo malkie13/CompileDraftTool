@@ -100,7 +100,7 @@ function displayProtocols() {
             <strong>${protocol.Protocol}</strong><br>
             ${protocol.Top}<br>
             ${protocol.Bottom}<br>
-            <em>Set: ${protocol.Set}</em>
+            <em><b>Set: ${protocol.Set}</b></em>
         `;
         protocolCards.appendChild(card);
     });
@@ -145,7 +145,7 @@ function standardDraft() {
             <strong>${protocol.Protocol}</strong><br>
             ${protocol.Top}<br>
             ${protocol.Bottom}<br>
-            <em>Set: ${protocol.Set}</em>
+            <em><b>Set: ${protocol.Set}</b></em>
         `;
 
         // Add click event to select the protocol
@@ -205,7 +205,7 @@ function blindEliminationDraft() {
             <strong>${protocol.Protocol}</strong><br>
             ${protocol.Top}<br>
             ${protocol.Bottom}<br>
-            <em>Set: ${protocol.Set}</em>
+            <em><b>Set: ${protocol.Set}</b></em>
         `;
 
         // Add click event to eliminate the protocol
@@ -237,23 +237,23 @@ function endDraft() {
     // Display results
     results.classList.remove('hidden');
     results.innerHTML = `
-        <h3>Draft Results</h3>
-        <h4>Player 1 Pool</h4>
+        <h2>Draft Results</h2>
+        <h3>Player 1 Pool</h3>
         <div>${player1Pool.map(p => `
             <div class="protocol-card">
                 <strong>${p.Protocol}</strong><br>
                 ${p.Top}<br>
                 ${p.Bottom}<br>
-                <em>Set: ${p.Set}</em>
+                <em><b>Set: ${p.Set}</b></em>
             </div>
         `).join('')}</div>
-        <h4>Player 2 Pool</h4>
+        <h3>Player 2 Pool</h3>
         <div>${player2Pool.map(p => `
             <div class="protocol-card">
                 <strong>${p.Protocol}</strong><br>
                 ${p.Top}<br>
                 ${p.Bottom}<br>
-                <em>Set: ${p.Set}</em>
+                <em><b>Set: ${p.Set}</b></em>
             </div>
         `).join('')}</div>
         <button id="start-over">Start Over</button>
