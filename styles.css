@@ -98,9 +98,11 @@ strong {
     cursor: default;
 }
 
-/* Enable hover effect during drafting */
-#draft-actions .protocol-card:hover {
-    background: #e0e0e0;
+/* Enable hover effect during drafting (desktop only) */
+@media (hover: hover) and (pointer: fine) {
+    #draft-actions .protocol-card:hover {
+        background: #e0e0e0;
+    }
 }
 
 /* Disable hover effect in results */
