@@ -63,7 +63,7 @@ document.getElementById('standard-draft').addEventListener('click', () => {
     document.getElementById('draft-type').classList.add('hidden'); // Hide draft type selection
     document.getElementById('set-selection').classList.remove('hidden'); // Show set selection
     document.getElementById('set-selection').innerHTML = `
-        <h2>Standard Draft - Select Sets</h2>
+        <h3>Standard Draft - Select Sets</h3>
         <div id="set-checkboxes"></div>
         <button id="confirm-sets">Confirm Sets</button>
         <div id="protocol-cards"></div> <!-- Protocol cards will be displayed here -->
@@ -78,7 +78,7 @@ document.getElementById('blind-elimination-draft').addEventListener('click', () 
     document.getElementById('draft-type').classList.add('hidden'); // Hide draft type selection
     document.getElementById('set-selection').classList.remove('hidden'); // Show set selection
     document.getElementById('set-selection').innerHTML = `
-        <h2>Blind Elimination Draft - Select Sets</h2>
+        <h3>Blind Elimination Draft - Select Sets</h3>
         <div id="set-checkboxes"></div>
         <button id="confirm-sets">Confirm Sets</button>
         <div id="protocol-cards"></div> <!-- Protocol cards will be displayed here -->
@@ -237,8 +237,8 @@ function endDraft() {
     // Display results
     results.classList.remove('hidden');
     results.innerHTML = `
-        <h2>Draft Results</h2>
-        <h3>Player 1 Pool</h3>
+        <h3>Draft Results</h3>
+        <h4>Player 1 Pool</h4>
         <div>${player1Pool.map(p => `
             <div class="protocol-card">
                 <strong>${p.Protocol}</strong><br>
@@ -247,7 +247,7 @@ function endDraft() {
                 <em>Set: ${p.Set}</em>
             </div>
         `).join('')}</div>
-        <h3>Player 2 Pool</h3>
+        <h4>Player 2 Pool</h4>
         <div>${player2Pool.map(p => `
             <div class="protocol-card">
                 <strong>${p.Protocol}</strong><br>

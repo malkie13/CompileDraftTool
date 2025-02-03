@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
@@ -18,7 +18,11 @@ body {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 3px solid #000;
+    font-size: 1em;
+    font-weight: bolder;
     margin: 5px;
     cursor: pointer;
 }
@@ -26,12 +30,20 @@ button {
 #protocol-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    margin: 5px;
 }
 
 .protocol-card {
-    border: 1px solid #ccc;
+    font-family: 'Orbitron', sans-serif;
+    border: 5px solid #e0e0e0;
+    border-radius: 5px;
     padding: 10px;
     width: 200px;
+    margin-bottom: 3px;
+    min-height: 33%;
+    max-height: 33%;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 1em;
     background: #f9f9f9;
 }
