@@ -11,22 +11,23 @@ body {
 
 .title {
     max-width: 810px;
-    background: rgba(40, 40, 40, 0.749);
+    background: rgba(40, 40, 40, 0.648);
     margin: 0 auto;
-    color: #fff;
+    color: #ffffff;
     padding: 20px;
     font-family: 'Orbitron', sans-serif;
-    border: 5px solid #e0e0e0;
-    border-radius: 5px;
+    border-radius: 15px !important;
+    border: 3px solid #ffffffd0 !important;
 }
 
 .container {
+    color: #ffffff;
     max-width: 810px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(55, 13, 59, 0.484);
     padding: 20px;
-    border: 5px solid #ffffff;
-    border-radius: 5px;
+    border-radius: 15px !important;
+    border: 3px solid #ab20e6 !important;
 }
 
 p {
@@ -72,19 +73,25 @@ h4 {
 
 button {
     padding: 10px 10px;
-    border-radius: 5px;
-    border: 3px solid #000;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    background: rgba(21, 33, 48, 0.764);
     font-family: 'Orbitron', sans-serif;
-    font-weight: bold;
+    color: #fff;
     font-size: 1em;
     margin: 5px;
     cursor: pointer;
+}
+
+button:hover {
+    background: rgba(36, 60, 90, 0.9);
 }
 
 #protocol-cards, #draft-actions {
     display: flex;
     flex-wrap: wrap;
     margin: 3px;
+    color: #000
 }
 
 strong {
@@ -94,8 +101,9 @@ strong {
 
 .protocol-card {
     font-family: 'Orbitron', sans-serif;
+    color: #000;
     border: 5px solid #e0e0e0;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     width: 230px;
     margin: 3px;
@@ -117,7 +125,7 @@ strong {
 /* Enable hover effect during drafting (desktop only) */
 @media (hover: hover) and (pointer: fine) {
     #draft-actions .protocol-card:hover {
-        background: #e0e0e0;
+        background: #6e167371 !important;
     }
 }
 
@@ -132,6 +140,87 @@ strong {
 
 /* Ensure prompt text and protocol cards are displayed correctly */
 #draft-actions p {
+    color: #fff;
     width: 100%; /* Ensure the prompt text takes full width */
     margin-bottom: 10px; /* Add space below the prompt text */
+}
+/* Background Colors for Each Protocol 
+Currently includes all protocols from MN01 and AX01
+Protocols not included in this list will default to a white background
+copy / past one of the code blocks below and change the name for new protocols
+*/
+
+.apathy {
+    background-color: hsl(0, 0%, 66%) !important;
+    --shadow-color: hsl(0, 0%, 46%);
+}
+
+.darkness {
+    background-color: hsl(54, 4%, 47%) !important;
+    --shadow-color: hsl(54, 4%, 27%);
+}
+
+.death {
+    background-color: hsl(229, 7%, 30%) !important;
+    --shadow-color: hsl(229, 7%, 10%);
+}
+
+.fire {
+    background-color: hsl(30, 53%, 69%) !important;
+    --shadow-color: hsl(30, 53%, 49%);
+}
+
+.gravity {
+    background-color: hsl(325, 22%, 46%) !important;
+    --shadow-color: hsl(325, 22%, 26%);
+}
+
+.hate {
+    background-color: hsl(1, 42%, 46%) !important;
+    --shadow-color: hsl(1, 42%, 26%);
+}
+
+.life {
+    background-color: hsl(58, 17%, 60%) !important;
+    --shadow-color: hsl(58, 17%, 40%);
+}
+
+.light {
+    background-color: hsl(35, 17%, 67%) !important;
+    --shadow-color: hsl(35, 17%, 47%);
+}
+
+.love {
+    background-color: hsl(352, 36%, 62%) !important;
+    --shadow-color: hsl(352, 36%, 42%);
+}
+
+.metal {
+    background-color: hsl(18, 6%, 45%) !important;
+    --shadow-color: hsl(18, 6%, 25%);
+}
+
+.plague {
+    background-color: hsl(95, 19%, 43%) !important;
+    --shadow-color: hsl(95, 19%, 23%);
+}
+
+.psychic {
+    background-color: hsl(266, 9%, 48%) !important;
+    --shadow-color: hsl(266, 9%, 28%);
+}
+
+.speed {
+    background-color: hsl(216, 14%, 62%) !important;
+    --shadow-color: hsl(216, 14%, 42%);
+}
+
+.spirit {
+    background-color: hsl(189, 26%, 36%) !important;
+    --shadow-color: hsl(189, 26%, 16%);
+}
+
+.water {
+    background-color: hsl(180, 8%, 66%) !important;
+    --shadow-color: hsl(180, 8%, 46%);
 }

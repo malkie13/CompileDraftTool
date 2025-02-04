@@ -67,6 +67,7 @@ document.getElementById('standard-draft').addEventListener('click', () => {
         <div id="set-checkboxes"></div>
         <button id="confirm-sets">Confirm Sets</button>
         <div id="protocol-cards"></div> <!-- Protocol cards will be displayed here -->
+        <form action=""><button type="submit">Start Over</button></form>
     `;
     initializeSetSelection(); // Reinitialize set selection
     selectedSets = new Set(protocols.map(p => p.Set)); // Default to all sets
@@ -82,6 +83,7 @@ document.getElementById('blind-elimination-draft').addEventListener('click', () 
         <div id="set-checkboxes"></div>
         <button id="confirm-sets">Confirm Sets</button>
         <div id="protocol-cards"></div> <!-- Protocol cards will be displayed here -->
+        <form action=""><button type="submit">Start Over</button></form>
     `;
     initializeSetSelection(); // Reinitialize set selection
     selectedSets = new Set(protocols.map(p => p.Set)); // Default to all sets
@@ -95,7 +97,7 @@ function displayProtocols() {
     const filteredProtocols = protocols.filter(p => selectedSets.has(p.Set));
     filteredProtocols.forEach(protocol => {
         const card = document.createElement('div');
-        card.className = 'protocol-card';
+        card.className = `protocol-card ${protocol.Protocol.toLowerCase().replace(/\s+/g, '-')}`; // Add protocol-specific class
         card.innerHTML = `
             <strong>${protocol.Protocol}</strong><br>
             ${protocol.Top}<br>
@@ -136,10 +138,11 @@ function standardDraft() {
     }
 
     draftActions.innerHTML = `<p>Player ${currentPlayer}'s turn. <br>Select ${selectionsRemaining} protocol(s):</p>`;
+
     // Display available protocols for selection
     availablePool.forEach((protocol, index) => {
         const card = document.createElement('div');
-        card.className = 'protocol-card';
+        card.className = `protocol-card ${protocol.Protocol.toLowerCase().replace(/\s+/g, '-')}`; // Add protocol-specific class
         card.innerHTML = `
             <strong>${protocol.Protocol}</strong><br>
             ${protocol.Top}<br>
@@ -189,7 +192,7 @@ function blindEliminationDraft() {
 
     // Prompt Player 1 to eliminate 1 protocol
     if (currentPlayer === 1) {
-        draftActions.innerHTML = `<p>Player 1's turn.<br> Select 1 protocol to eliminate:</p>`;
+        draftActions.innerHTML = `<p>Player 1's turn.<br> Select 1 protocol to eliminate:</p><br>`;
     }
     // Prompt Player 2 to eliminate 1 protocol
     else if (currentPlayer === 2) {
@@ -199,7 +202,7 @@ function blindEliminationDraft() {
     // Display available protocols for elimination
     availablePool.forEach((protocol, index) => {
         const card = document.createElement('div');
-        card.className = 'protocol-card';
+        card.className = `protocol-card ${protocol.Protocol.toLowerCase().replace(/\s+/g, '-')}`; // Add protocol-specific class
         card.innerHTML = `
             <strong>${protocol.Protocol}</strong><br>
             ${protocol.Top}<br>
@@ -239,7 +242,7 @@ function endDraft() {
         <h3>Draft Results</h3>
         <h4>Player 1 Pool</h4>
         <div>${player1Pool.map(p => `
-            <div class="protocol-card">
+            <div class="protocol-card ${p.Protocol.toLowerCase().replace(/\s+/g, '-')}">
                 <strong>${p.Protocol}</strong><br>
                 ${p.Top}<br>
                 ${p.Bottom}<br>
@@ -248,32 +251,16 @@ function endDraft() {
         `).join('')}</div>
         <h4>Player 2 Pool</h4>
         <div>${player2Pool.map(p => `
-            <div class="protocol-card">
+            <div class="protocol-card ${p.Protocol.toLowerCase().replace(/\s+/g, '-')}">
                 <strong>${p.Protocol}</strong><br>
                 ${p.Top}<br>
                 ${p.Bottom}<br>
                 <em><b>Set: ${p.Set}</b></em>
             </div>
         `).join('')}</div>
-        <button id="start-over">Start Over</button>
+        <form action=""><button type="submit">Start Over</button></form>
     `;
 
     // Add event listener to the Start Over button
     document.getElementById('start-over').addEventListener('click', startOver);
-}
-
-// Start Over function
-function startOver() {
-    // Reset all variables
-    availablePool = [];
-    player1Pool = [];
-    player2Pool = [];
-    draftType = null;
-    selectedSets = new Set();
-    currentPlayer = 1;
-    selectionsRemaining = 0;
-
-    // Hide results and show draft type selection
-    document.getElementById('results').classList.add('hidden');
-    document.getElementById('draft-type').classList.remove('hidden');
 }
