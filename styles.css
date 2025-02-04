@@ -10,7 +10,7 @@ body {
 }
 
 .title {
-    max-width: 805px;
+    max-width: 810px;
     background: rgba(40, 40, 40, 0.648);
     margin: 0 auto;
     color: #ffffff;
@@ -22,7 +22,7 @@ body {
 
 .container {
     color: #ffffff;
-    max-width: 805px;
+    max-width: 810px;
     margin: 0 auto;
     background: rgba(55, 13, 59, 0.484);
     padding: 20px;
