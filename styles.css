@@ -10,7 +10,7 @@ body {
 }
 
 .title {
-    max-width: 810px;
+    max-width: 805px;
     background: rgba(40, 40, 40, 0.648);
     margin: 0 auto;
     color: #ffffff;
@@ -22,7 +22,7 @@ body {
 
 .container {
     color: #ffffff;
-    max-width: 810px;
+    max-width: 805px;
     margin: 0 auto;
     background: rgba(55, 13, 59, 0.484);
     padding: 20px;
@@ -114,7 +114,7 @@ strong {
 
 .protocol-card {
     font-family: 'Orbitron', sans-serif;
-    color: #000;
+    color: #393939;
     border: 5px solid #e0e0e0;
     border-radius: 10px;
     padding: 10px;
@@ -125,31 +125,16 @@ strong {
     overflow: hidden;
     padding: 10px;
     font-size: 1em;
-    background: #f9f9f9;
+    background: #ffffff;
     cursor: pointer;
-}
-
-/* Disable hover effect during set selection */
-#set-selection .protocol-card:hover {
-    background: #f9f9f9;
-    cursor: default;
 }
 
 /* Enable hover effect during drafting (desktop only) */
 @media (hover: hover) and (pointer: fine) {
     #draft-actions .protocol-card:hover {
-        background: #6e167371 !important;
-        color: #868686 !important;
+        background: #c52dce71 !important;
+        color: #ffffff !important;
     }
-}
-
-/* Disable hover effect in results */
-#results .protocol-card {
-    cursor: default;
-}
-
-#results .protocol-card:hover {
-    background: #f9f9f9;
 }
 
 /* Ensure prompt text and protocol cards are displayed correctly */
@@ -160,77 +145,102 @@ strong {
 }
 
 /* Background Colors for Each Protocol */
+/* These include colors for all protocols included in Main 01 and Aux 01 (MN01/AX01)
+For new protocols, copy / paste the following code and modify as desired.
+
+.protocolname {
+    background-color: hsl(0, 0%, 66%) !important;
+    --shadow-color: hsl(0, 0%, 46%);
+    color: #ffffff !important;
+}
+*/
+
 .apathy {
     background-color: hsl(0, 0%, 66%) !important;
     --shadow-color: hsl(0, 0%, 46%);
+    color: #ffffff !important;
 }
 
 .darkness {
     background-color: hsl(54, 4%, 47%) !important;
     --shadow-color: hsl(54, 4%, 27%);
+    color: #ffffff !important;
 }
 
 .death {
     background-color: hsl(229, 7%, 30%) !important;
     --shadow-color: hsl(229, 7%, 10%);
+    color: #ffffff !important;
 }
 
 .fire {
     background-color: hsl(30, 53%, 69%) !important;
     --shadow-color: hsl(30, 53%, 49%);
+    color: #ffffff !important;
 }
 
 .gravity {
     background-color: hsl(325, 22%, 46%) !important;
     --shadow-color: hsl(325, 22%, 26%);
+    color: #ffffff !important;
 }
 
 .hate {
     background-color: hsl(1, 42%, 46%) !important;
     --shadow-color: hsl(1, 42%, 26%);
+    color: #ffffff !important;
 }
 
 .life {
     background-color: hsl(58, 17%, 60%) !important;
     --shadow-color: hsl(58, 17%, 40%);
+    color: #ffffff !important;
 }
 
 .light {
     background-color: hsl(35, 17%, 67%) !important;
     --shadow-color: hsl(35, 17%, 47%);
+    color: #ffffff !important;
 }
 
 .love {
     background-color: hsl(352, 36%, 62%) !important;
     --shadow-color: hsl(352, 36%, 42%);
+    color: #ffffff !important;
 }
 
 .metal {
     background-color: hsl(18, 6%, 45%) !important;
     --shadow-color: hsl(18, 6%, 25%);
+    color: #ffffff !important;
 }
 
 .plague {
     background-color: hsl(95, 19%, 43%) !important;
     --shadow-color: hsl(95, 19%, 23%);
+    color: #ffffff !important;
 }
 
 .psychic {
     background-color: hsl(266, 9%, 48%) !important;
     --shadow-color: hsl(266, 9%, 28%);
+    color: #ffffff !important;
 }
 
 .speed {
     background-color: hsl(216, 14%, 62%) !important;
     --shadow-color: hsl(216, 14%, 42%);
+    color: #ffffff !important;
 }
 
 .spirit {
     background-color: hsl(189, 26%, 36%) !important;
     --shadow-color: hsl(189, 26%, 16%);
+    color: #ffffff !important;
 }
 
 .water {
     background-color: hsl(180, 8%, 66%) !important;
     --shadow-color: hsl(180, 8%, 46%);
+    color: #ffffff !important;
 }
