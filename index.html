@@ -11,11 +11,11 @@
 </head>
 <body>
     <div class="title">
-    <img src="img/compile.png" alt="Compile">
-    <h1>Draft Tool</h1>
+        <img src="img/compile.png" alt="Compile">
+        <h1>Draft Tool</h1>
     </div>
     <div class="container">
-           <!-- Draft Type Selection -->
+        <!-- Draft Type Selection -->
         <div id="draft-type">
             <h3>Select Draft Type</h3>
             <button id="standard-draft">Standard Draft</button>
@@ -24,10 +24,11 @@
 
         <!-- Set Selection -->
         <div id="set-selection" class="hidden">
-            <h3>Standard Draft - Select Sets</h3> <!-- This will be dynamically updated -->
+            <h3>Standard Draft - Select Sets</h3>
             <div id="set-checkboxes"></div>
             <button id="confirm-sets">Confirm Sets</button>
-            <div id="protocol-cards"></div> <!-- Protocol cards will be displayed here -->
+            <div id="protocol-cards"></div>
+            <button id="start-over-button">Start Over</button>
         </div>
 
         <!-- Protocol Display -->
@@ -40,14 +41,17 @@
         <div id="draft-process" class="hidden">
             <h3>Drafting Process</h3>
             <div id="draft-actions"></div>
-            <form action=""><button type="submit">Start Over</button></form>
+            <button id="start-over-button">Start Over</button>
         </div>
 
         <!-- Results -->
         <div id="results" class="hidden">
             <h3>Draft Results</h3>
+            <h4>Player 1 Pool</h4>
             <div id="player1-pool"></div>
+            <h4>Player 2 Pool</h4>
             <div id="player2-pool"></div>
+            <button id="start-over-button">Start Over</button>
         </div>
     </div>
     <script src="script.js"></script>

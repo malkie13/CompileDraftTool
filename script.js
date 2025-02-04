@@ -66,8 +66,8 @@ document.getElementById('standard-draft').addEventListener('click', () => {
         <h3>Standard Draft - Select Sets</h3>
         <div id="set-checkboxes"></div>
         <button id="confirm-sets">Confirm Sets</button>
-        <div id="protocol-cards"></div> <!-- Protocol cards will be displayed here -->
-        <form action=""><button type="submit">Start Over</button></form>
+        <div id="protocol-cards"></div>
+        <button id="start-over-button">Start Over</button>
     `;
     initializeSetSelection(); // Reinitialize set selection
     selectedSets = new Set(protocols.map(p => p.Set)); // Default to all sets
@@ -82,8 +82,8 @@ document.getElementById('blind-elimination-draft').addEventListener('click', () 
         <h3>Blind Elimination Draft - Select Sets</h3>
         <div id="set-checkboxes"></div>
         <button id="confirm-sets">Confirm Sets</button>
-        <div id="protocol-cards"></div> <!-- Protocol cards will be displayed here -->
-        <form action=""><button type="submit">Start Over</button></form>
+        <div id="protocol-cards"></div>
+        <button id="start-over-button">Start Over</button>
     `;
     initializeSetSelection(); // Reinitialize set selection
     selectedSets = new Set(protocols.map(p => p.Set)); // Default to all sets
@@ -241,26 +241,59 @@ function endDraft() {
     results.innerHTML = `
         <h3>Draft Results</h3>
         <h4>Player 1 Pool</h4>
-        <div>${player1Pool.map(p => `
-            <div class="protocol-card ${p.Protocol.toLowerCase().replace(/\s+/g, '-')}">
-                <strong>${p.Protocol}</strong><br>
-                ${p.Top}<br>
-                ${p.Bottom}<br>
-                <em><b>Set: ${p.Set}</b></em>
-            </div>
-        `).join('')}</div>
+        <div id="player1-pool">
+            ${player1Pool.map(p => `
+                <div class="protocol-card ${p.Protocol.toLowerCase().replace(/\s+/g, '-')}">
+                    <strong>${p.Protocol}</strong><br>
+                    ${p.Top}<br>
+                    ${p.Bottom}<br>
+                    <em><b>Set: ${p.Set}</b></em>
+                </div>
+            `).join('')}
+        </div>
         <h4>Player 2 Pool</h4>
-        <div>${player2Pool.map(p => `
-            <div class="protocol-card ${p.Protocol.toLowerCase().replace(/\s+/g, '-')}">
-                <strong>${p.Protocol}</strong><br>
-                ${p.Top}<br>
-                ${p.Bottom}<br>
-                <em><b>Set: ${p.Set}</b></em>
-            </div>
-        `).join('')}</div>
-        <form action=""><button type="submit">Start Over</button></form>
+        <div id="player2-pool">
+            ${player2Pool.map(p => `
+                <div class="protocol-card ${p.Protocol.toLowerCase().replace(/\s+/g, '-')}">
+                    <strong>${p.Protocol}</strong><br>
+                    ${p.Top}<br>
+                    ${p.Bottom}<br>
+                    <em><b>Set: ${p.Set}</b></em>
+                </div>
+            `).join('')}
+        </div>
+        <button id="start-over-button">Start Over</button>
     `;
-
-    // Add event listener to the Start Over button
-    document.getElementById('start-over').addEventListener('click', startOver);
 }
+
+// Reset the app to its initial state
+function resetApp() {
+    // Reset state variables (except protocols)
+    availablePool = [];
+    player1Pool = [];
+    player2Pool = [];
+    draftType = null;
+    selectedSets = new Set();
+    currentPlayer = 1;
+    selectionsRemaining = 0;
+
+    // Reset the UI
+    document.getElementById('draft-type').classList.remove('hidden');
+    document.getElementById('set-selection').classList.add('hidden');
+    document.getElementById('protocol-display').classList.add('hidden');
+    document.getElementById('draft-process').classList.add('hidden');
+    document.getElementById('results').classList.add('hidden');
+
+    // Clear the results section's inner HTML
+    document.getElementById('results').innerHTML = '';
+
+    // Reinitialize set selection
+    initializeSetSelection();
+}
+
+// Add event listener for the "Start Over" button
+document.addEventListener('click', function (event) {
+    if (event.target && event.target.id === 'start-over-button') {
+        resetApp();
+    }
+});

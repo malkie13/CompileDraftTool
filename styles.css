@@ -91,7 +91,20 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     margin: 3px;
-    color: #000
+    color: #000;
+}
+
+#player1-pool,
+#player2-pool {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+    gap: 3px;
+}
+
+#results #start-over-button {
+    width: auto;
+    margin: 5px;
 }
 
 strong {
@@ -126,7 +139,7 @@ strong {
 @media (hover: hover) and (pointer: fine) {
     #draft-actions .protocol-card:hover {
         background: #6e167371 !important;
-        color:#d0d0d0 !important;
+        color: #868686 !important;
     }
 }
 
@@ -142,15 +155,11 @@ strong {
 /* Ensure prompt text and protocol cards are displayed correctly */
 #draft-actions p {
     color: #fff;
-    width: 100%; /* Ensure the prompt text takes full width */
-    margin-bottom: 10px; /* Add space below the prompt text */
+    width: 100%;
+    margin-bottom: 10px;
 }
-/* Background Colors for Each Protocol 
-Currently includes all protocols from MN01 and AX01
-Protocols not included in this list will default to a white background
-copy / past one of the code blocks below and change the name for new protocols
-*/
 
+/* Background Colors for Each Protocol */
 .apathy {
     background-color: hsl(0, 0%, 66%) !important;
     --shadow-color: hsl(0, 0%, 46%);
