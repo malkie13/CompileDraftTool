@@ -126,6 +126,7 @@ strong {
 @media (hover: hover) and (pointer: fine) {
     #draft-actions .protocol-card:hover {
         background: #6e167371 !important;
+        color:#d0d0d0 !important;
     }
 }
 
