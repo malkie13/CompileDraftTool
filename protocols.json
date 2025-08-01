@@ -6,6 +6,30 @@
         "Set": "AX01"
     },
     {
+        "Protocol": "Chaos",
+        "Top": "Unpredictable. Beware.",
+        "Bottom": "Draw, Rearrage, Covered",
+        "Set": "MN02"
+    },
+    {
+        "Protocol": "Clarity",
+        "Top": "I can see my path clearly.",
+        "Bottom": "Draw, Reveal",
+        "Set": "MN02"
+    },
+    {
+        "Protocol": "Corruption",
+        "Top": "One bad apple spoils the bunch.",
+        "Bottom": "Flip, Discard",
+        "Set": "MN02"
+    },
+    {
+        "Protocol": "Courage",
+        "Top": "A blaze in the face of adversity.",
+        "Bottom": "Draw, Compare",
+        "Set": "MN02"
+    },
+    {
         "Protocol": "Darkness",
         "Top": "An absence of light.",
         "Bottom": "Draw, Shift, Manipulate",
@@ -16,6 +40,12 @@
         "Top": "Nothing shall survive.",
         "Bottom": "Delete, Draw",
         "Set": "MN01"
+    },
+    {
+        "Protocol": "Fear",
+        "Top": "Run away.",
+        "Bottom": "Shift, Discard",
+        "Set": "MN02"
     },
     {
         "Protocol": "Fire",
@@ -36,6 +66,12 @@
         "Set": "AX01"
     },
     {
+        "Protocol": "Ice",
+        "Top": "Cold, strong, and slick.",
+        "Bottom": "Shift, Prevent",
+        "Set": "MN02"
+    },
+    {
         "Protocol": "Life",
         "Top": "Bring about new growth.",
         "Bottom": "Flip, Top Deck Play, Draw",
@@ -54,10 +90,28 @@
         "Set": "AX01"
     },
     {
+        "Protocol": "Luck",
+        "Top": "Roll the dice.",
+        "Bottom": "Random, Delete, Play",
+        "Set": "MN02"
+    },
+    {
         "Protocol": "Metal",
         "Top": "Hardened against all.",
         "Bottom": "Prevent, Draw, Flip",
         "Set": "MN01"
+    },
+    {
+        "Protocol": "Mirror",
+        "Top": "A reflection of the truth.",
+        "Bottom": "Shift, Repeat",
+        "Set": "MN02"
+    },
+    {
+        "Protocol": "Peace",
+        "Top": "Respite and solace as long as we can.",
+        "Bottom": "Mutual Discard, Draw",
+        "Set": "MN02"
     },
     {
         "Protocol": "Plague",
@@ -72,6 +126,12 @@
         "Set": "MN01"
     },
     {
+        "Protocol": "Smoke",
+        "Top": "A blanket of obfuscation.",
+        "Bottom": "Face-Down, Shift",
+        "Set": "MN02"
+    },
+    {
         "Protocol": "Speed",
         "Top": "Quicken with every step.",
         "Bottom": "Draw, Play, Shift",
@@ -82,6 +142,18 @@
         "Top": "True strength from within.",
         "Bottom": "Flip, Shift, Draw",
         "Set": "MN01"
+    },
+    {
+        "Protocol": "Time",
+        "Top": "Forward to the past.",
+        "Bottom": "Discard, Trash",
+        "Set": "MN02"
+    },
+    {
+        "Protocol": "War",
+        "Top": "Raging conflict, but toward what end?",
+        "Bottom": "React, Discard",
+        "Set": "MN02"
     },
     {
         "Protocol": "Water",

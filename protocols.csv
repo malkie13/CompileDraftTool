@@ -1,16 +1,28 @@
 ﻿Protocol,Top,Bottom,Set
 Apathy,"Uncaring, unfeeling.",Flip Face-Down,AX01
+Chaos,Unpredictable. Beware.,"Draw, Rearrage, Covered",MN02
+Clarity,I can see my path clearly.,"Draw, Reveal",MN02
+Corruption,One bad apple spoils the bunch.,"Flip, Discard",MN02
+Courage,A blaze in the face of adversity.,"Draw, Compare",MN02
 Darkness,An absence of light.,"Draw, Shift, Manipulate",MN01
 Death,Nothing shall survive.,"Delete, Draw",MN01
+Fear,Run away.,"Shift, Discard",MN02
 Fire,Burn at both ends.,Discard for effect,MN01
 Gravity,Draw ever inward.,"Shift, Flip, Draw",MN01
 Hate,Ultimate disdain.,Delete theirs and yours,AX01
+Ice,"Cold, strong, and slick.","Shift, Prevent",MN02
 Life,Bring about new growth.,"Flip, Top Deck Play, Draw",MN01
 Light,Burn away the dark.,"Draw, Flip, Shift",MN01
 Love,Giving is the true gift.,"Draw, Gift, Exchange",AX01
+Luck,Roll the dice.,"Random, Delete, Play",MN02
 Metal,Hardened against all.,"Prevent, Draw, Flip",MN01
+Mirror,A reflection of the truth.,"Shift, Repeat",MN02
+Peace,Respite and solace as long as we can.,"Mutual Discard, Draw",MN02
 Plague,Slow death from within.,"Force Discard, Flip",MN01
 Psychic,Know your foe's mind.,"Draw, Manipulate, Shift",MN01
+Smoke,A blanket of obfuscation.,"Face-Down, Shift",MN02
 Speed,Quicken with every step.,"Draw, Play, Shift",MN01
 Spirit,True strength from within.,"Flip, Shift, Draw",MN01
+Time,Forward to the past.,"Discard, Trash",MN02
+War,"Raging conflict, but toward what end?","React, Discard",MN02
 Water,Wash away and renew.,"Return, Draw, Flip",MN01
