@@ -1,4 +1,5 @@
 # CompileDraftTool
+
 -UPDATED Jan 19, 2026- Added MN02 and AX02 and matched styles to the Compile Card Database at https://chuckplayer.github.io/compile/
 
 Drafting tool for the Compile card game.
@@ -8,4 +9,4 @@ DBtool.py is a python tool to take a csv file, formatted and named like the incl
 
 CompileDraftTool.py is the original python script for guiding players through the draft process of the Compile card game by Greater Than Games, it uses protocols.json as the database of available protocols and includes two draft formats: Standard (the format from the original rules) and Blind Elimination (randomly eliminates from the total pool down to a pool of 9 protocols, prompts players to each eliminate a protocol, then proceeds with the draft process).
 
-With the aid fo DeepSeek I built out a java app as it exists now and can be accessed at https://malkie13.github.io/CompileDraftTool/
+With the aid of DeepSeek I built out a java app as it exists now and can be accessed at https://malkie13.github.io/CompileDraftTool/
