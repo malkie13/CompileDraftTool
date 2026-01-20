@@ -256,6 +256,12 @@ For new protocols, copy / paste the following code and modify as desired.
     color: #ffffff !important;
 }
 
+.luck{
+    background-color: hsl(39, 77%, 41%) !important;
+    --shadow-color: hsl(14, 85%, 29%);
+    color: #ffffff !important;
+}
+
 .metal {
     background-color: hsl(18, 6%, 45%) !important;
     --shadow-color: hsl(18, 6%, 25%);
