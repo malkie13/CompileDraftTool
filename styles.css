@@ -205,7 +205,7 @@ For new protocols, copy / paste the following code and modify as desired.
 .diversity {
     background-color: hsl(56, 50%, 42%) !important;
     --shadow-color: hsl(0, 0%, 30%);
-    
+    color: #ffffff !important;
 }
 
 .fear{
