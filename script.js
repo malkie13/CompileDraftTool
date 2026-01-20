@@ -19,7 +19,15 @@ fetch('protocols.json')
 function initializeSetSelection() {
     const setCheckboxes = document.getElementById('set-checkboxes');
     const sets = new Set(protocols.map(p => p.Set));
-    sets.forEach(set => {
+    
+    // Convert Set to Array and sort alphabetically
+    const sortedSets = Array.from(sets).sort();
+    
+    // Clear existing checkboxes first
+    setCheckboxes.innerHTML = '';
+    
+    // Create checkboxes in sorted order
+    sortedSets.forEach(set => {
         const label = document.createElement('label');
         label.innerHTML = `<input type="checkbox" value="${set}" checked> ${set}`;
         setCheckboxes.appendChild(label);
@@ -34,6 +42,7 @@ function initializeSetSelection() {
     });
 
     // Display protocols initially (all sets selected by default)
+    selectedSets = new Set(sortedSets); // Update selectedSets with sorted order
     displayProtocols();
 
     // Attach event listener to the dynamically created Confirm Sets button
