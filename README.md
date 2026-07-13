@@ -1,5 +1,5 @@
 # CompileDraftTool
-
+-UPDATED Jul 13, 2026- Added MN03 and AX03, Style update pending
 -UPDATED Jan 19, 2026- Added MN02 and AX02 and matched styles to the Compile Card Database at https://chuckplayer.github.io/compile/
 
 Drafting tool for the Compile card game.

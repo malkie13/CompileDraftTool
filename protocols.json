@@ -1,5 +1,11 @@
 [
     {
+        "Protocol": "Ambush",
+        "Top": "From the shadows",
+        "Bottom": "Flip, Draw, Face-Down",
+        "Set": "MN03"
+    },
+    {
         "Protocol": "Apathy",
         "Top": "Uncaring, unfeeling",
         "Bottom": "Flip Face-Down",
@@ -54,6 +60,12 @@
         "Set": "AX02"
     },
     {
+        "Protocol": "Envy",
+        "Top": "I want what you have",
+        "Bottom": "Catch Up, Flip",
+        "Set": "MN03"
+    },
+    {
         "Protocol": "Fear",
         "Top": "Run away",
         "Bottom": "Shift, Discard",
@@ -66,10 +78,34 @@
         "Set": "MN01"
     },
     {
+        "Protocol": "Flexible",
+        "Top": "Always fitting",
+        "Bottom": "Choice, Shift, Draw",
+        "Set": "AX03"
+    },
+    {
+        "Protocol": "Fulcrum",
+        "Top": "Balanced on a point",
+        "Bottom": "Draw, Swap, Cards In Hand",
+        "Set": "MN03"
+    },
+    {
+        "Protocol": "Gluttony",
+        "Top": "More!",
+        "Bottom": "Draw, Clear Cache, Delete",
+        "Set": "MN03"
+    },
+    {
         "Protocol": "Gravity",
         "Top": "Draw ever inward",
         "Bottom": "Shift, Flip, Draw",
         "Set": "MN01"
+    },
+    {
+        "Protocol": "Greed",
+        "Top": "I deserve that",
+        "Bottom": "Discard, Repeating Effects",
+        "Set": "MN03"
     },
     {
         "Protocol": "Hate",
@@ -82,6 +118,12 @@
         "Top": "Cold, Strong, and Slick",
         "Bottom": "Shift, Prevent",
         "Set": "MN02"
+    },
+    {
+        "Protocol": "Inert",
+        "Top": "Is this thing on?",
+        "Bottom": "Negate Face-Up, Symmetrical",
+        "Set": "AX03"
     },
     {
         "Protocol": "Life",
@@ -108,6 +150,12 @@
         "Set": "MN02"
     },
     {
+        "Protocol": "Lust",
+        "Top": "Come here",
+        "Bottom": "Forced Play, Control",
+        "Set": "MN03"
+    },
+    {
         "Protocol": "Metal",
         "Top": "Hardened against all",
         "Bottom": "Prevent, Draw, Flip",
@@ -118,6 +166,24 @@
         "Top": "A Reflection of the truth",
         "Bottom": "Shift, Repeat",
         "Set": "MN02"
+    },
+    {
+        "Protocol": "Momentum",
+        "Top": "P = Mass * Velocity",
+        "Bottom": "After Compile, Draw",
+        "Set": "MN03"
+    },
+    {
+        "Protocol": "Nova",
+        "Top": "Devastating critical mass",
+        "Bottom": "Stack Size, Shift, Rearrange",
+        "Set": "MN03"
+    },
+    {
+        "Protocol": "Overwhelm",
+        "Top": "Everything everywhere all at once",
+        "Bottom": "Play Face-Down, Win More",
+        "Set": "MN03"
     },
     {
         "Protocol": "Peace",
@@ -132,10 +198,28 @@
         "Set": "MN01"
     },
     {
+        "Protocol": "Pride",
+        "Top": "Only the best",
+        "Bottom": "Stay Ahead, Shift, Draw",
+        "Set": "MN03"
+    },
+    {
         "Protocol": "Psychic",
         "Top": "Know your foe's mind",
         "Bottom": "Draw, Manipulate, Shift",
         "Set": "MN01"
+    },
+    {
+        "Protocol": "Rigid",
+        "Top": "Stiff and uncompromising",
+        "Bottom": "Play Face-Down, Prevent",
+        "Set": "AX03"
+    },
+    {
+        "Protocol": "Sloth",
+        "Top": "Maybe later",
+        "Bottom": "Discard, Flip",
+        "Set": "MN03"
     },
     {
         "Protocol": "Smoke",
@@ -178,5 +262,11 @@
         "Top": "Wash away and renew",
         "Bottom": "Return, Draw, Flip",
         "Set": "MN01"
+    },
+    {
+        "Protocol": "Wrath",
+        "Top": "Vengeful Anger",
+        "Bottom": "Delete, Face-Down",
+        "Set": "MN03"
     }
 ]

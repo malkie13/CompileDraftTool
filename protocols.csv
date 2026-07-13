@@ -1,4 +1,5 @@
 ﻿Protocol,Top,Bottom,Set
+Ambush,From the shadows,"Flip, Draw, Face-Down",MN03
 Apathy,"Uncaring, unfeeling",Flip Face-Down,AX01
 Assimilation,Complete exchange and understanding,"Exchange, Play",AX02
 Chaos,Unpredictable Beware,"Draw, Rearrange, Covered",MN02
@@ -8,20 +9,33 @@ Courage,A blaze in the face of adversity,"Draw, Compare",MN02
 Darkness,An absence of light,"Draw, Shift, Manipulate",MN01
 Death,Nothing shall survive,"Delete, Draw",MN01
 Diversity,Our differences are our strength,"Play, Compare, Covered",AX02
+Envy,I want what you have,"Catch Up, Flip",MN03
 Fear,Run away,"Shift, Discard",MN02
 Fire,Burn at both ends,Discard for effect,MN01
+Flexible,Always fitting,"Choice, Shift, Draw",AX03
+Fulcrum,Balanced on a point,"Draw, Swap, Cards In Hand",MN03
+Gluttony,More!,"Draw, Clear Cache, Delete",MN03
 Gravity,Draw ever inward,"Shift, Flip, Draw",MN01
+Greed,I deserve that,"Discard, Repeating Effects",MN03
 Hate,Ultimate disdain,Delete theirs and yours,AX01
 Ice,"Cold, Strong, and Slick","Shift, Prevent",MN02
+Inert,Is this thing on?,"Negate Face-Up, Symmetrical",AX03
 Life,Bring about new growth,"Flip, Top Deck Play, Draw",MN01
 Light,Burn away the dark,"Draw, Flip, Shift",MN01
 Love,Giving is the true gift,"Draw, Gift, Exchange",AX01
 Luck,Roll the dice,"Random, Delete, Play",MN02
+Lust,Come here,"Forced Play, Control",MN03
 Metal,Hardened against all,"Prevent, Draw, Flip",MN01
 Mirror,A Reflection of the truth,"Shift, Repeat",MN02
+Momentum,P = Mass * Velocity,"After Compile, Draw",MN03
+Nova,Devastating critical mass,"Stack Size, Shift, Rearrange",MN03
+Overwhelm,Everything everywhere all at once,"Play Face-Down, Win More",MN03
 Peace,Respite and solace as long as we can,"Mutual Discard, Draw",MN02
 Plague,Slow death from within,"Force Discard, Flip",MN01
+Pride,Only the best,"Stay Ahead, Shift, Draw",MN03
 Psychic,Know your foe's mind,"Draw, Manipulate, Shift",MN01
+Rigid,Stiff and uncompromising,"Play Face-Down, Prevent",AX03
+Sloth,Maybe later,"Discard, Flip",MN03
 Smoke, A blanket of obfuscation,"Face-Down, Shift",MN02
 Speed,Quicken with every step,"Draw, Play, Shift",MN01
 Spirit,True strength from within,"Flip, Shift, Draw",MN01
@@ -29,3 +43,4 @@ Time,Forward to the past,"Discard, Trash",MN02
 Unity,Together we are strong,"Cover, Flip, Compile",AX02
 War,"Raging conflict, but to what end?","React, Discard",MN02
 Water,Wash away and renew,"Return, Draw, Flip",MN01
+Wrath,Vengeful Anger,"Delete, Face-Down",MN03
