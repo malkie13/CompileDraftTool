@@ -113,7 +113,7 @@ strong {
 
 .protocol-card {
     font-family: 'Orbitron', sans-serif;
-    color: #e8eaf0;
+    color: #d8d8d8;
     border: 5px solid #e0e0e0;
     border-radius: 10px;
     padding: 10px;
@@ -144,10 +144,11 @@ strong {
 }
 
 /* Background Colors for Each Protocol */
-/* These include colors for all protocols included in Main 01-03 and Aux 01-03 (MN01,MN02,MN03/AX01,AX02,AX03).
+/* These include colors for all protocols included in Main 01-03 and Aux 01-03 (MN01,MN02,MN03/AX01)
 For new protocols, copy / paste the following code and modify as desired.
 .apathy         { background-color: hsl(0, 0%, 56%) !important;   --shadow-color: hsl(0, 0%, 30%);      --protocol-color: hsl(0, 0%, 56%); }
 */
+.ambush         { background-color: hsl(280, 40%, 15%) !important; --shadow-color: hsl(280, 40%, 6%);    --protocol-color: hsl(280, 40%, 35%); }
 .apathy         { background-color: hsl(0, 0%, 56%) !important;   --shadow-color: hsl(0, 0%, 30%);      --protocol-color: hsl(0, 0%, 56%); }
 .assimilation   { background-color: hsl(0, 0%, 42%) !important;   --shadow-color: hsl(0, 0%, 22%);      --protocol-color: hsl(0, 0%, 42%); }
 .chaos          { background-color: hsl(241, 73%, 19%) !important; --shadow-color: hsl(0, 0%, 10%);      --protocol-color: hsl(241, 73%, 40%); }
@@ -157,20 +158,33 @@ For new protocols, copy / paste the following code and modify as desired.
 .darkness       { background-color: hsl(54, 4%, 38%) !important;   --shadow-color: hsl(54, 4%, 18%);     --protocol-color: hsl(54, 4%, 55%); }
 .death          { background-color: hsl(229, 7%, 24%) !important;  --shadow-color: hsl(229, 7%, 8%);     --protocol-color: hsl(229, 7%, 45%); }
 .diversity      { background-color: hsl(56, 50%, 34%) !important;  --shadow-color: hsl(0, 0%, 20%);      --protocol-color: hsl(56, 50%, 50%); }
+.envy           { background-color: hsl(165, 55%, 26%) !important; --shadow-color: hsl(165, 55%, 10%);   --protocol-color: hsl(165, 55%, 45%); }
 .fear           { background-color: hsl(0, 78%, 36%) !important;   --shadow-color: hsl(0, 0%, 20%);      --protocol-color: hsl(0, 78%, 50%); }
 .fire           { background-color: hsl(30, 53%, 55%) !important;  --shadow-color: hsl(30, 53%, 30%);    --protocol-color: hsl(30, 53%, 60%); }
+.flexible       { background-color: hsl(285, 45%, 34%) !important; --shadow-color: hsl(285, 45%, 15%);   --protocol-color: hsl(285, 45%, 52%); }
+.fulcrum        { background-color: hsl(210, 15%, 34%) !important; --shadow-color: hsl(210, 15%, 16%);   --protocol-color: hsl(210, 15%, 52%); }
+.gluttony       { background-color: hsl(24, 75%, 34%) !important;  --shadow-color: hsl(24, 75%, 14%);    --protocol-color: hsl(24, 75%, 52%); }
 .gravity        { background-color: hsl(325, 22%, 36%) !important; --shadow-color: hsl(325, 22%, 16%);   --protocol-color: hsl(325, 22%, 55%); }
+.greed          { background-color: hsl(320, 55%, 32%) !important; --shadow-color: hsl(320, 55%, 14%);   --protocol-color: hsl(320, 55%, 50%); }
 .hate           { background-color: hsl(1, 42%, 36%) !important;   --shadow-color: hsl(1, 42%, 16%);     --protocol-color: hsl(1, 42%, 55%); }
 .ice            { background-color: hsl(200, 80%, 40%) !important; --shadow-color: hsl(200, 100%, 20%);  --protocol-color: hsl(200, 80%, 55%); }
+.inert          { background-color: hsl(0, 0%, 26%) !important;    --shadow-color: hsl(0, 0%, 10%);      --protocol-color: hsl(0, 0%, 44%); }
 .life           { background-color: hsl(58, 17%, 48%) !important;  --shadow-color: hsl(58, 17%, 28%);    --protocol-color: hsl(58, 17%, 60%); }
 .light          { background-color: hsl(35, 17%, 54%) !important;  --shadow-color: hsl(35, 17%, 34%);    --protocol-color: hsl(35, 17%, 65%); }
 .love           { background-color: hsl(352, 36%, 50%) !important; --shadow-color: hsl(352, 36%, 28%);   --protocol-color: hsl(352, 36%, 65%); }
 .luck           { background-color: hsl(39, 77%, 32%) !important;  --shadow-color: hsl(14, 85%, 18%);    --protocol-color: hsl(39, 77%, 50%); }
+.lust           { background-color: hsl(45, 70%, 34%) !important;  --shadow-color: hsl(45, 70%, 14%);    --protocol-color: hsl(45, 70%, 52%); }
 .metal          { background-color: hsl(18, 6%, 36%) !important;   --shadow-color: hsl(18, 6%, 16%);     --protocol-color: hsl(18, 6%, 55%); }
 .mirror         { background-color: hsl(276, 48%, 34%) !important; --shadow-color: hsl(0, 0%, 20%);      --protocol-color: hsl(276, 48%, 55%); }
+.momentum       { background-color: hsl(225, 55%, 32%) !important; --shadow-color: hsl(225, 55%, 14%);   --protocol-color: hsl(225, 55%, 50%); }
+.nova           { background-color: hsl(15, 85%, 38%) !important;  --shadow-color: hsl(15, 85%, 16%);    --protocol-color: hsl(15, 85%, 58%); }
+.overwhelm      { background-color: hsl(355, 65%, 24%) !important; --shadow-color: hsl(355, 65%, 10%);   --protocol-color: hsl(355, 65%, 42%); }
 .peace          { background-color: hsl(120, 57%, 28%) !important; --shadow-color: hsl(120, 100%, 14%);  --protocol-color: hsl(120, 57%, 45%); }
 .plague         { background-color: hsl(95, 19%, 33%) !important;  --shadow-color: hsl(95, 19%, 13%);    --protocol-color: hsl(95, 19%, 50%); }
+.pride          { background-color: hsl(38, 70%, 36%) !important;  --shadow-color: hsl(38, 70%, 16%);    --protocol-color: hsl(38, 70%, 54%); }
 .psychic        { background-color: hsl(266, 9%, 36%) !important;  --shadow-color: hsl(266, 9%, 16%);    --protocol-color: hsl(266, 9%, 55%); }
+.rigid          { background-color: hsl(68, 55%, 28%) !important;  --shadow-color: hsl(68, 55%, 12%);    --protocol-color: hsl(68, 55%, 46%); }
+.sloth          { background-color: hsl(80, 20%, 30%) !important;  --shadow-color: hsl(80, 20%, 12%);    --protocol-color: hsl(80, 20%, 46%); }
 .smoke          { background-color: hsl(0, 0%, 22%) !important;    --shadow-color: hsl(0, 0%, 6%);       --protocol-color: hsl(0, 0%, 45%); }
 .speed          { background-color: hsl(216, 14%, 48%) !important; --shadow-color: hsl(216, 14%, 28%);   --protocol-color: hsl(216, 14%, 65%); }
 .spirit         { background-color: hsl(189, 26%, 26%) !important; --shadow-color: hsl(189, 26%, 10%);   --protocol-color: hsl(189, 26%, 45%); }
@@ -178,3 +192,4 @@ For new protocols, copy / paste the following code and modify as desired.
 .unity          { background-color: hsl(268, 61%, 36%) !important; --shadow-color: hsl(0, 0%, 20%);      --protocol-color: hsl(268, 61%, 55%); }
 .war            { background-color: hsl(348, 81%, 20%) !important; --shadow-color: hsl(348, 83%, 10%);   --protocol-color: hsl(348, 81%, 40%); }
 .water          { background-color: hsl(180, 8%, 50%) !important;  --shadow-color: hsl(180, 8%, 30%);    --protocol-color: hsl(180, 8%, 60%); }
+.wrath          { background-color: hsl(0, 70%, 26%) !important;   --shadow-color: hsl(0, 70%, 10%);     --protocol-color: hsl(0, 70%, 44%); }
