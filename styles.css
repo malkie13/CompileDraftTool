@@ -131,7 +131,7 @@ strong {
 /* Enable hover effect during drafting (desktop only) */
 @media (hover: hover) and (pointer: fine) {
     #draft-actions .protocol-card:hover {
-        background: #c52dce71 !important;
+        background: #ee5ff571 !important;
         color: #ffffff !important;
     }
 }
