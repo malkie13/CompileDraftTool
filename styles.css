@@ -193,3 +193,70 @@ For new protocols, copy / paste the following code and modify as desired.
 .war            { background-color: hsl(348, 81%, 20%) !important; --shadow-color: hsl(348, 83%, 10%);   --protocol-color: hsl(348, 81%, 40%); }
 .water          { background-color: hsl(180, 8%, 50%) !important;  --shadow-color: hsl(180, 8%, 30%);    --protocol-color: hsl(180, 8%, 60%); }
 .wrath          { background-color: hsl(0, 70%, 26%) !important;   --shadow-color: hsl(0, 70%, 10%);     --protocol-color: hsl(0, 70%, 44%); }
+
+/* ---- Blind Elimination config panel ---- */
+#blind-elimination-config {
+    margin-top: 15px;
+    padding: 15px;
+    border: 3px solid #ab20e6;
+    border-radius: 15px;
+    background: rgba(21, 33, 48, 0.5);
+    text-align: center;
+}
+
+#blind-elimination-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+/* Each option looks like a button-like pill */
+.pool-size-option {
+    position: relative;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    background: rgba(21, 33, 48, 0.764);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    user-select: none;
+}
+
+/* Hide the actual radio input but keep it accessible */
+.pool-size-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pool-size-option:hover {
+    background: rgba(36, 60, 90, 0.9);
+}
+
+/* Selected state */
+.pool-size-option.selected {
+    border-color: #ee5ff5;
+    background: rgba(238, 95, 245, 0.35);
+    box-shadow: 0 0 8px #ee5ff5aa;
+}
+
+/* Keyboard focus indicator */
+.pool-size-option input[type="radio"]:focus-visible + span {
+    outline: 2px dashed #ee5ff5;
+    outline-offset: 4px;
+}
+
+.input-error {
+    color: #ff6b6b;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 0;
+}

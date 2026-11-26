@@ -20,6 +20,15 @@
             <h3>Select Draft Type</h3>
             <button id="standard-draft">Standard Draft</button>
             <button id="blind-elimination-draft">Blind Elimination Draft</button>
+
+            <!-- Blind Elimination pool size input (hidden until BE is selected) -->
+            <div id="blind-elimination-config" class="hidden">
+                <p>Select the number of protocols remaining after blind elimination:</p>
+                <div id="blind-elimination-options"></div>
+                <button id="blind-elimination-confirm">Confirm</button>
+                <button id="blind-elimination-cancel">Cancel</button>
+                <p id="blind-elimination-error" class="input-error hidden"></p>
+            </div>
         </div>
 
         <!-- Set Selection -->

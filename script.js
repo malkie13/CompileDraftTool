@@ -6,6 +6,12 @@ let draftType = null;
 let selectedSets = new Set();
 let currentPlayer = 1; // Tracks the current player (1 or 2)
 let selectionsRemaining = 0; // Tracks how many selections the current player must make
+let blindEliminationPoolSize = 9; // Number of protocols after blind elimination (min 8, max 12)
+
+// Blind Elimination pool-size constraints
+const BLIND_POOL_MIN = 8;
+const BLIND_POOL_MAX = 12;
+const BLIND_POOL_DEFAULT = 9;
 
 // Load protocols.json
 fetch('protocols.json')
@@ -14,6 +20,9 @@ fetch('protocols.json')
         protocols = data;
         initializeSetSelection();
     });
+
+// Build the Blind Elimination radio options once at startup
+buildBlindEliminationOptions();
 
 // Initialize set selection
 function initializeSetSelection() {
@@ -55,8 +64,10 @@ function confirmSets() {
     availablePool = protocols.filter(p => selectedSets.has(p.Set));
 
     // Error checking for minimum protocols
-    if ((draftType === 'standard' && availablePool.length < 7) || (draftType === 'blind-elimination' && availablePool.length < 9)) {
-        alert(`Not enough protocols in the selected sets. Required: ${draftType === 'standard' ? 7 : 9}`);
+    if ((draftType === 'standard' && availablePool.length < 7) ||
+        (draftType === 'blind-elimination' && availablePool.length < blindEliminationPoolSize)) {
+        const required = draftType === 'standard' ? 7 : blindEliminationPoolSize;
+        alert(`Not enough protocols in the selected sets. Required: ${required}`);
         return;
     }
 
@@ -83,20 +94,138 @@ document.getElementById('standard-draft').addEventListener('click', () => {
     displayProtocols(); // Display protocols dynamically
 });
 
-document.getElementById('blind-elimination-draft').addEventListener('click', () => {
+// --- Blind Elimination config: radio options for pool size ---
+
+// Build the radio options once on page load
+function buildBlindEliminationOptions() {
+    const container = document.getElementById('blind-elimination-options');
+    if (!container) return; // Guard if element not yet present
+    container.innerHTML = '';
+
+    for (let size = BLIND_POOL_MIN; size <= BLIND_POOL_MAX; size++) {
+        const label = document.createElement('label');
+        label.className = 'pool-size-option';
+
+        const radio = document.createElement('input');
+        radio.type = 'radio';
+        radio.name = 'blind-pool-size';
+        radio.value = size;
+
+        const span = document.createElement('span');
+        span.textContent = size;
+
+        label.appendChild(radio);
+        label.appendChild(span);
+        container.appendChild(label);
+
+        // Toggle the .selected class when the radio changes
+        radio.addEventListener('change', () => {
+            document.querySelectorAll('.pool-size-option').forEach(el => el.classList.remove('selected'));
+            label.classList.add('selected');
+            document.getElementById('blind-elimination-error').classList.add('hidden');
+        });
+
+        // Also respond to clicks on the label for snappier feedback
+        label.addEventListener('click', () => {
+            radio.checked = true;
+            radio.dispatchEvent(new Event('change'));
+        });
+    }
+}
+
+function setBlindEliminationSelection(value) {
+    document.querySelectorAll('.pool-size-option').forEach(label => {
+        const radio = label.querySelector('input[type="radio"]');
+        if (radio.value === String(value)) {
+            radio.checked = true;
+            label.classList.add('selected');
+        } else {
+            radio.checked = false;
+            label.classList.remove('selected');
+        }
+    });
+}
+
+function showBlindEliminationConfig() {
+    const config = document.getElementById('blind-elimination-config');
+    const error = document.getElementById('blind-elimination-error');
+
+    error.textContent = '';
+    error.classList.add('hidden');
+
+    // Pre-select the default each time the panel opens
+    setBlindEliminationSelection(BLIND_POOL_DEFAULT);
+
+    config.classList.remove('hidden');
+
+    // Focus the selected radio for keyboard users
+    const selectedRadio = document.querySelector('input[name="blind-pool-size"]:checked');
+    if (selectedRadio) selectedRadio.focus();
+}
+
+function hideBlindEliminationConfig() {
+    document.getElementById('blind-elimination-config').classList.add('hidden');
+}
+
+function proceedWithBlindElimination(poolSize) {
+    blindEliminationPoolSize = poolSize;
     draftType = 'blind-elimination';
-    document.getElementById('draft-type').classList.add('hidden'); // Hide draft type selection
-    document.getElementById('set-selection').classList.remove('hidden'); // Show set selection
+
+    document.getElementById('draft-type').classList.add('hidden');
+    document.getElementById('set-selection').classList.remove('hidden');
     document.getElementById('set-selection').innerHTML = `
         <h3>Blind Elimination Draft - Select Sets</h3>
+        <p>Pool size after blind elimination: <b>${blindEliminationPoolSize}</b></p>
         <div id="set-checkboxes"></div>
         <button id="confirm-sets">Confirm Sets</button>
         <div id="protocol-cards"></div>
         <button id="start-over-button">Start Over</button>
     `;
-    initializeSetSelection(); // Reinitialize set selection
-    selectedSets = new Set(protocols.map(p => p.Set)); // Default to all sets
-    displayProtocols(); // Display protocols dynamically
+    initializeSetSelection();
+    selectedSets = new Set(protocols.map(p => p.Set));
+    displayProtocols();
+}
+
+// --- Blind Elimination config event listeners ---
+
+document.getElementById('blind-elimination-draft').addEventListener('click', () => {
+    showBlindEliminationConfig();
+});
+
+document.getElementById('blind-elimination-cancel').addEventListener('click', () => {
+    hideBlindEliminationConfig();
+});
+
+document.getElementById('blind-elimination-confirm').addEventListener('click', () => {
+    const selected = document.querySelector('input[name="blind-pool-size"]:checked');
+    const error = document.getElementById('blind-elimination-error');
+
+    if (!selected) {
+        error.textContent = 'Please select a pool size before continuing.';
+        error.classList.remove('hidden');
+        return;
+    }
+
+    const poolSize = Number(selected.value);
+    if (!Number.isInteger(poolSize) || poolSize < BLIND_POOL_MIN || poolSize > BLIND_POOL_MAX) {
+        error.textContent = `Please select a number between ${BLIND_POOL_MIN} and ${BLIND_POOL_MAX}.`;
+        error.classList.remove('hidden');
+        return;
+    }
+
+    error.classList.add('hidden');
+    proceedWithBlindElimination(poolSize);
+});
+
+// Keyboard: Enter confirms, Escape cancels while the config panel is open
+document.getElementById('blind-elimination-config').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        document.getElementById('blind-elimination-confirm').click();
+    } else if (e.key === 'Escape') {
+        e.preventDefault();
+        hideBlindEliminationConfig();
+    }
 });
 
 // Display protocols dynamically
@@ -193,8 +322,8 @@ function standardDraft() {
 function blindEliminationDraft() {
     const draftActions = document.getElementById('draft-actions');
 
-    // Randomly eliminate all but 9 protocols
-    while (availablePool.length > 9) {
+    // Randomly eliminate down to the chosen pool size
+    while (availablePool.length > blindEliminationPoolSize) {
         const randomIndex = Math.floor(Math.random() * availablePool.length);
         availablePool.splice(randomIndex, 1);
     }
@@ -225,7 +354,9 @@ function blindEliminationDraft() {
             currentPlayer = currentPlayer === 1 ? 2 : 1; // Switch players
 
             // Check if elimination phase is complete
-            if (availablePool.length === 7) {
+            // After both players eliminate once, the pool reaches (poolSize - 2).
+            // With poolSize >= 8, that's >= 6, so standardDraft() always has enough.
+            if (availablePool.length === blindEliminationPoolSize - 2) {
                 standardDraft(); // Proceed to standard draft
             } else {
                 blindEliminationDraft(); // Continue elimination
@@ -285,9 +416,11 @@ function resetApp() {
     selectedSets = new Set();
     currentPlayer = 1;
     selectionsRemaining = 0;
+    blindEliminationPoolSize = 9; // Reset to default
 
     // Reset the UI
     document.getElementById('draft-type').classList.remove('hidden');
+    hideBlindEliminationConfig();
     document.getElementById('set-selection').classList.add('hidden');
     document.getElementById('protocol-display').classList.add('hidden');
     document.getElementById('draft-process').classList.add('hidden');
